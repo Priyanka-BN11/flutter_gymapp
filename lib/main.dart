@@ -11,8 +11,10 @@ class MyApp extends StatelessWidget {
   final pages = [
     PageViewModel(
       pageColor: const Color(0xFF03A9F4),
-      bubble: Image.network(
-          "https://img.icons8.com/ios-filled/100/ffffff/home.png"),
+      bubble: CircleAvatar(
+        radius: 30,
+        backgroundColor: Colors.white,
+      ),
       body: const Text(
         'Page 1',
         style: const TextStyle(
@@ -25,17 +27,22 @@ class MyApp extends StatelessWidget {
         fontFamily: 'MyFont',
         color: Colors.white,
       ),
-      mainImage: Image.network(
-        "https://specials-images.forbesimg.com/imageserve/5d35eacaf1176b0008974b54/960x0.jpg?cropX1=790&cropX2=5350&cropY1=784&cropY2=3349",
-        height: 100.0,
-        width: 100.0,
-        alignment: Alignment.center,
+      mainImage: Builder(
+        builder: (context) {
+          return Image.asset(
+            "assets/images/sample1.png",
+            fit: BoxFit.contain,
+            height: MediaQuery.of(context).size.height * 0.4,
+          );
+        },
       ),
     ),
     PageViewModel(
       pageColor: const Color(0xFF03A9F4),
-      bubble: Image.network(
-          "https://img.icons8.com/ios-filled/100/ffffff/home.png"),
+      bubble: CircleAvatar(
+        radius: 30,
+        backgroundColor: Colors.white,
+      ),
       body: const Text(
         'Page 2',
         style: const TextStyle(
@@ -48,17 +55,22 @@ class MyApp extends StatelessWidget {
         fontFamily: 'MyFont',
         color: Colors.white,
       ),
-      mainImage: Image.network(
-        "https://specials-images.forbesimg.com/imageserve/5d35eacaf1176b0008974b54/960x0.jpg?cropX1=790&cropX2=5350&cropY1=784&cropY2=3349",
-        height: 100.0,
-        width: 100.0,
-        alignment: Alignment.center,
+      mainImage: Builder(
+        builder: (context) {
+          return Image.asset(
+            "assets/images/sample2.png",
+            fit: BoxFit.contain,
+            height: MediaQuery.of(context).size.height * 0.4,
+          );
+        },
       ),
     ),
     PageViewModel(
       pageColor: const Color(0xFF03A9F4),
-      bubble: Image.network(
-          "https://img.icons8.com/ios-filled/100/ffffff/home.png"),
+      bubble: CircleAvatar(
+        radius: 30,
+        backgroundColor: Colors.white,
+      ),
       body: const Text(
         'Page 3',
         style: const TextStyle(
@@ -71,11 +83,14 @@ class MyApp extends StatelessWidget {
         fontFamily: 'MyFont',
         color: Colors.white,
       ),
-      mainImage: Image.network(
-        "https://specials-images.forbesimg.com/imageserve/5d35eacaf1176b0008974b54/960x0.jpg?cropX1=790&cropX2=5350&cropY1=784&cropY2=3349",
-        height: 100.0,
-        width: 100.0,
-        alignment: Alignment.center,
+      mainImage: Builder(
+        builder: (context) {
+          return Image.asset(
+            "assets/images/sample3.png",
+            fit: BoxFit.contain,
+            height: MediaQuery.of(context).size.height * 0.4,
+          );
+        },
       ),
     )
   ];
